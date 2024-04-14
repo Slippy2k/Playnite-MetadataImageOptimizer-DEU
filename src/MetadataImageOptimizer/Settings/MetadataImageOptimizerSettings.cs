@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Playnite.SDK.Data;
 using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.Formats.Webp;
@@ -38,34 +38,34 @@ namespace MetadataImageOptimizer.Settings
         {
             background = new ImageTypeSettings
             {
-                Format = "jpg"
-                , MaxHeight = 1080
-                , MaxWidth = 1920
-                , Optimize = false
+                Format = "webp"
+                , MaxHeight = 720
+                , MaxWidth = 1280
+                , Optimize = true
             };
 
             cover = new ImageTypeSettings
             {
-                Format = "jpg"
+                Format = "webp"
                 , MaxHeight = 900
                 , MaxWidth = 600
-                , Optimize = false
+                , Optimize = true
             };
 
             icon = new ImageTypeSettings
             {
-                Format = "png"
-                , MaxHeight = 256
-                , MaxWidth = 256
-                , Optimize = false
+                Format = "webp"
+                , MaxHeight = 64
+                , MaxWidth = 64
+                , Optimize = true
             };
 
             quality = new QualitySettings
             {
-                JpgQuality = 90
+                JpgQuality = 80
                 , PngCompressionLevel = PngCompressionLevel.Level6
                 , WebpEncodingMethod = WebpEncodingMethod.Level4
-                , WebpQuality = 90
+                , WebpQuality = 80
             };
         }
     }
