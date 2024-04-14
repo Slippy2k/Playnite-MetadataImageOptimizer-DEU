@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="MetadataImageOptimizer.Views.GeneralSettingsView"
+<UserControl x:Class="MetadataImageOptimizer.Views.GeneralSettingsView"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:controls="clr-namespace:MetadataImageOptimizer.Controls"
@@ -23,25 +23,25 @@
   </UserControl.Resources>
     <StackPanel Margin="15">
         <StackPanel Orientation="Horizontal">
-            <CheckBox Content="Always optimize images when editing a game" IsChecked="{Binding Settings.AlwaysOptimizeOnSave}" />
+            <CheckBox Content="Bilder beim Bearbeiten eines Spiels immer optimieren" IsChecked="{Binding Settings.AlwaysOptimizeOnSave}" />
             <TextBlock Margin="10,0,0,0"
         FontFamily="{DynamicResource FontIcoFont}"
         Text="&#xefca;">
                 <TextBlock.ToolTip>
                     <TextBlock>
-            If enabled: When a game entry is saved, all image types where 'Optimize' is checked will be optimized.<LineBreak />
-            If disabled: When a game entry is saved, only images that were modified and where 'Optimize' is checked will be optimized.</TextBlock>
+            Falls aktiviert: Wenn ein Spieleintrag gespeichert wird, werden alle Bildtypen, bei denen "Optimieren" aktiviert ist, optimiert.<LineBreak />
+            Falls deaktiviert: Wenn ein Spieleintrag gespeichert wird, werden nur die Bilder optimiert, die geändert wurden und bei denen "Optimieren" aktiviert ist.</TextBlock>
                 </TextBlock.ToolTip>
       </TextBlock>
     </StackPanel>
     <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-      <CheckBox Content="Run in background" IsChecked="{Binding Settings.RunInBackground}" />
+      <CheckBox Content="Im Hintergrund laufen" IsChecked="{Binding Settings.RunInBackground}" />
       <TextBlock Margin="10,0,0,0"
         FontFamily="{DynamicResource FontIcoFont}"
         Text="&#xefca;">
         <TextBlock.ToolTip>
           <TextBlock>
-            If enabled: Images will be optimized in the background in a queue.
+            Falls aktiviert: Die Bilder werden im Hintergrund in einer Warteschlange optimiert.
           </TextBlock>
         </TextBlock.ToolTip>
       </TextBlock>
@@ -49,7 +49,7 @@
 
     <controls:ImageTypeSettingsGroupBox Margin="0,15,0,0"
       AvailableImageFormats="{Binding Settings.AvailableImageFormats}"
-      Header="Background"
+      Header="Hintergrund"
       Settings="{Binding Settings.Background}" />
     <controls:ImageTypeSettingsGroupBox Margin="0,15,0,0"
       AvailableImageFormats="{Binding Settings.AvailableImageFormats}"
@@ -61,7 +61,7 @@
       Settings="{Binding Settings.Icon}" />
 
     <TextBlock Margin="5,10,0,0" TextWrapping="Wrap">
-      * The JPG format does not support transparency.<LineBreak />
-      WebP images are smaller but require more time to convert.</TextBlock>
+      * Das JPG-Format unterstützt keine Transparenz.<LineBreak />
+      WebP Bilder sind kleiner, benötigen aber mehr Zeit für die Konvertierung.</TextBlock>
   </StackPanel>
 </UserControl>
