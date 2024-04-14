@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Playnite.SDK.Data;
 using SixLabors.ImageSharp.Formats.Png;
@@ -17,29 +17,29 @@ namespace MetadataImageOptimizer.Settings
         public Dictionary<PngCompressionLevel, string> AvailablePngCompressionLevels { get; }
             = new Dictionary<PngCompressionLevel, string>
             {
-                { PngCompressionLevel.Level0, "0 (No compression)" }
+                { PngCompressionLevel.Level0, "0 (Keine Kompression)" }
                 , { PngCompressionLevel.Level1, "1" }
                 , { PngCompressionLevel.Level2, "2" }
                 , { PngCompressionLevel.Level3, "3" }
                 , { PngCompressionLevel.Level4, "4" }
                 , { PngCompressionLevel.Level5, "5" }
-                , { PngCompressionLevel.Level6, "6 (Default)" }
+                , { PngCompressionLevel.Level6, "6 (Standard)" }
                 , { PngCompressionLevel.Level7, "7" }
                 , { PngCompressionLevel.Level8, "8" }
-                , { PngCompressionLevel.Level9, "9 (Highest compression)" }
+                , { PngCompressionLevel.Level9, "9 (Höchste Kompression)" }
             };
 
         [DontSerialize]
         public Dictionary<WebpEncodingMethod, string> AvailableWebpEncodingMethods { get; }
             = new Dictionary<WebpEncodingMethod, string>
             {
-                { WebpEncodingMethod.Level0, "0 (Fastest)" }
+                { WebpEncodingMethod.Level0, "0 (Schnellste)" }
                 , { WebpEncodingMethod.Level1, "1" }
                 , { WebpEncodingMethod.Level2, "2" }
                 , { WebpEncodingMethod.Level3, "3" }
-                , { WebpEncodingMethod.Level4, "4 (Default)" }
+                , { WebpEncodingMethod.Level4, "4 (Standard)" }
                 , { WebpEncodingMethod.Level5, "5" }
-                , { WebpEncodingMethod.Level6, "6 (Slowest)" }
+                , { WebpEncodingMethod.Level6, "6 (Langsamste)" }
             };
 
         public int JpgQuality
