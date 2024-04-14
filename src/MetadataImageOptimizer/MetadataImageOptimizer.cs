@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -35,7 +35,7 @@ namespace MetadataImageOptimizer
         {
             yield return new GameMenuItem
             {
-                Description = "Optimize images",
+                Description = "Bilder optimieren",
                 MenuSection = "MetadataImageOptimizer",
                 Action = actionArgs =>
                 {
@@ -54,7 +54,7 @@ namespace MetadataImageOptimizer
                 yield return new MainMenuItem()
                 {
                     MenuSection = $"@MetadataImageOptimizer|Optimizing {_backgroundOptimizeQueue.Count} games",
-                    Description = "Cancel",
+                    Description = "Abbrechen",
                     Action = (a) =>
                     {
                         ClearBackgroundOptimizeQueue();
@@ -139,7 +139,7 @@ namespace MetadataImageOptimizer
                             globalProgress.CurrentProgressValue += 1;
                         }
                     }
-                    , new GlobalProgressOptions("Optimizing game images...", false) { IsIndeterminate = gamesToUpdate.Count == 1 });
+                    , new GlobalProgressOptions("Optimieren von Spielbildern...", false) { IsIndeterminate = gamesToUpdate.Count == 1 });
             }
         }
 
@@ -162,7 +162,7 @@ namespace MetadataImageOptimizer
                         , optimizerSettings.Icon.Optimize);
                 }
 
-                api.Dialogs.ShowMessage($"Queued up {games.Count} games to optimize. Optimizing in the background.", "Queued up optimization");
+                api.Dialogs.ShowMessage($"In der Warteschlange {games.Count} Spiele zu optimieren. Optimieren im Hintergrund.", "Optimierung in der Warteschleife");
             }
             else
             {
@@ -182,7 +182,7 @@ namespace MetadataImageOptimizer
                             globalProgress.CurrentProgressValue += 1;
                         }
                     }
-                    , new GlobalProgressOptions("Optimizing game images...", false) { IsIndeterminate = games.Count == 1 });
+                    , new GlobalProgressOptions("Optimieren von Spielbildern...", false) { IsIndeterminate = games.Count == 1 });
             }
         }
 
@@ -233,7 +233,7 @@ namespace MetadataImageOptimizer
                 }
                 catch (Exception ex)
                 {
-                    logger.Error(ex, $"Error while optimizing background image for '{game.Name}'.");
+                    logger.Error(ex, $"Fehler beim Optimieren des Hintergrundbildes für '{game.Name}'.");
                 }
             }
 
@@ -246,7 +246,7 @@ namespace MetadataImageOptimizer
                 }
                 catch (Exception ex)
                 {
-                    logger.Error(ex, $"Error while optimizing cover image for '{game.Name}'.");
+                    logger.Error(ex, $"Fehler beim Optimieren des Titelbildes für '{game.Name}'.");
                 }
             }
 
@@ -259,7 +259,7 @@ namespace MetadataImageOptimizer
                 }
                 catch (Exception ex)
                 {
-                    logger.Error(ex, $"Error while optimizing icon for '{game.Name}'.");
+                    logger.Error(ex, $"Fehler beim Optimieren des Icon für '{game.Name}'.");
                 }
             }
 
